@@ -31,3 +31,13 @@ Congratulations! You should have a URL like:
 ```bash
 https://<github-user-name>.github.io/<github-project-name>/
 ```
+
+### Development
+
+To locally test your changes,
+
+```bash
+npm run dev
+```
+
+Then, go to `http://localhost:3000/info`.

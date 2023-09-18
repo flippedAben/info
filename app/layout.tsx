@@ -7,8 +7,8 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js on GitHub Pages",
-  description: "A Next.js web application on GitHub Pages",
+  title: "VGM jam",
+  description: "Info about a VGM jam",
 };
 
 export default function RootLayout({

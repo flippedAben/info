@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       game: "Chrono Trigger",
-      name: "Secret of the Forst",
+      name: "Secret Of The Forest",
       videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
       videoStyle: "Contraband Cover",
       sheetMusicLink: "https://www.vgleadsheets.com/view/chrono-trigger/secret-of-the-forest?transposition=C#",
@@ -55,7 +55,7 @@ export default function Home() {
     },
     {
       game: "Undertale",
-      name: "Once upon a time",
+      name: "Once Upon A Time",
       videoLink: "https://www.youtube.com/watch?v=s7RRgF5Ve_E",
       videoStyle: "Original",
       sheetMusicLink: "https://www.vgleadsheets.com/view/undertale/once-upon-a-time?transposition=C#",
@@ -75,6 +75,38 @@ export default function Home() {
       videoLink: "https://www.youtube.com/watch?v=E5lAfUJdzzc",
       videoStyle: "Original",
       sheetMusicLink: "https://www.vgleadsheets.com/view/mario-kart-64/rainbow-road?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
+    {
+      game: "Final Fantasy VII",
+      name: "Tifa's Theme",
+      videoLink: "https://www.youtube.com/watch?v=cO_ftxA28Y8",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/final-fantasy-vii/tifas-theme?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
+    {
+      game: "Donkey Kong Country 2: Diddy's Kong Quest",
+      name: "Stickerbush Symphony",
+      videoLink: "https://www.youtube.com/watch?v=mdPlcKg-qFs",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/donkey-kong-country-2-diddys-kong-quest/stickerbush-symphony?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
+    {
+      game: "Chrono Trigger",
+      name: "Corridors Of Time",
+      videoLink: "https://www.youtube.com/watch?v=BXo3DrXHY8w",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/chrono-trigger/corridors-of-time?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
+    {
+      game: "Hollow Knight",
+      name: "Dirtmouth",
+      videoLink: "https://www.youtube.com/watch?v=NSlkW1fFkyo",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/hollow-knight/dirtmouth?transposition=C#",
       sheetMusicOrigin: "vgleadsheets"
     },
   ]
@@ -110,8 +142,9 @@ export default function Home() {
         </Link>
       </Text>
       <Heading size="6" weight="regular">
-        Setlist
+        Setlist 
       </Heading>
+      We will play {songs.length} songs.
       <Table.Root>
         <Table.Header>
           <Table.Row>
@@ -139,25 +172,24 @@ export default function Home() {
               </Table.Cell>
             </Table.Row>
           )}
-      
-          
         </Table.Body>
       </Table.Root>
+
       <Heading size="6" weight="regular">
         What to bring
       </Heading>
       <Text ml="2">
+        <li>Music stands</li>
         <li>Hearing protection (hopefully not necessary)</li>
-        <li>Water!</li>
         <li>
-          Drummers. Sticks, brushes, mallets, aux precussion. Optionally, bring
+          <Text weight="bold">Drummers.</Text> Sticks, brushes, mallets, aux precussion. Optionally, bring
           cymbals. I will rent out a drum set (bass, snare, two toms), and
           cymbals (ride, crash), unless otherwise noted.
         </li>
         <li>
-          Keyboard players. Instrument and cables to plug into soundboard.
+          <Text weight="bold">Pianists.</Text> Instrument and cables to plug into mixer.
         </li>
-        <li>Guitar and bass players. Instrument and amp.</li>
+        <li><Text weight="bold">Guitar/bass players.</Text> Instrument and amp.</li>
       </Text>
       <Heading size="6" weight="regular">
         Cost

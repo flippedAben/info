@@ -109,6 +109,22 @@ export default function Home() {
       sheetMusicLink: "https://www.vgleadsheets.com/view/hollow-knight/dirtmouth?transposition=C#",
       sheetMusicOrigin: "vgleadsheets"
     },
+    {
+      game: "Castlevania",
+      name: "Bloody Tears",
+      videoLink: "https://www.youtube.com/watch?v=e2oZtvjg5oA",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/castlevania-ii-simons-quest/bloody-tears?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
+    {
+      game: "Persona 5",
+      name: "Layer Cake",
+      videoLink: "https://www.youtube.com/watch?v=C4nTv-pVk0k",
+      videoStyle: "Original",
+      sheetMusicLink: "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
+      sheetMusicOrigin: "vgleadsheets"
+    },
   ]
 
 
@@ -180,7 +196,7 @@ export default function Home() {
       </Heading>
       <Text ml="2">
         <li>Music stands</li>
-        <li>Hearing protection (hopefully not necessary)</li>
+        <li>Hearing protection (aka musician's earplugs)</li>
         <li>
           <Text weight="bold">Drummers.</Text> Sticks, brushes, mallets, aux precussion. Optionally, bring
           cymbals. I will rent out a drum set (bass, snare, two toms), and

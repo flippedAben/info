@@ -16,23 +16,7 @@ yarn create next-app --example github-pages nextjs-github-pages
 pnpm create next-app --example github-pages nextjs-github-pages
 ```
 
-### Deploy to GitHub Pages
-
-1.  Create a new public GitHub repository.
-1.  Edit `next.config.js` to match your GitHub repository name.
-1.  Push the starter code to the `main` branch.
-1.  Run the `deploy` script (e.g. `npm run deploy`) to create the `gh-pages` branch.
-1.  On GitHub, go to **Settings** > **Pages** > **Branch**, and choose `gh-pages` as the branch with the `/root` folder. Hit **Save**.
-1.  Make a change.
-1.  Run the `deploy` script again to push the changes to GitHub Pages.
-
-Congratulations! You should have a URL like:
-
-```bash
-https://<github-user-name>.github.io/<github-project-name>/
-```
-
-### Development
+### Develop
 
 To locally test your changes,
 
@@ -41,3 +25,14 @@ npm run dev
 ```
 
 Then, go to `http://localhost:3000/info`.
+
+### Deploy to GitHub Pages
+
+1. Make changes. Commit and push to `main`.
+1. `npm run deploy`
+
+Go the the URL, and you should see your changes appear shortly.
+
+```bash
+https://<github-user-name>.github.io/<github-project-name>/
+```

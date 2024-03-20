@@ -27,8 +27,8 @@ export default function Home() {
       videoLink: "https://www.youtube.com/watch?v=Uj07-YU5cTk",
       videoStyle: "Original",
       sheetMusicLink:
-        "https://www.vgleadsheets.com/view/the-legend-of-zelda-breath-of-the-wild/hateno-village-day?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
+        "https://drive.google.com/drive/folders/1qmwvRJHjK6IOrFF7IiSFeXy-cCyC5KZR?usp=sharing",
+      sheetMusicOrigin: "Google Drive",
     },
     {
       game: "Zelda: The Wind Waker",

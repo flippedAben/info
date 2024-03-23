@@ -108,8 +108,8 @@ export default function Home() {
       videoLink: "https://www.youtube.com/watch?v=BXo3DrXHY8w",
       videoStyle: "Original",
       sheetMusicLink:
-        "https://www.vgleadsheets.com/view/chrono-trigger/corridors-of-time?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
+        "https://drive.google.com/drive/folders/1d7xxRg-0WrN29jzTUoTZ_bGSDjjZFpSN?usp=sharing",
+      sheetMusicOrigin: "Google Drive",
     },
     {
       game: "Hollow Knight",

@@ -7,11 +7,19 @@ type Song = {
   videoLink: string;
   videoStyle: string;
   sheetMusicLink: string;
-  sheetMusicOrigin: string;
 };
 
 export default function Home() {
   const songs: Song[] = [
+    {
+      game: "Pokemon Gold & Silver",
+      name: "Azalea Town",
+      videoLink:
+        "https://www.youtube.com/watch?v=fbcjFvXGXYQ&ab_channel=pokemonmusicmaster",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/pokmon-gold-silver/azalea-town?transposition=C#",
+    },
     {
       game: "Super Mario 64",
       name: "Bob-omb Battlefield",
@@ -19,7 +27,6 @@ export default function Home() {
       videoStyle: "8-Bit Big Band Cover",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/super-mario-64/main-theme?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Zelda: Breath of the Wild",
@@ -28,7 +35,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1qmwvRJHjK6IOrFF7IiSFeXy-cCyC5KZR?usp=sharing",
-      sheetMusicOrigin: "Google Drive",
     },
     {
       game: "Zelda: The Wind Waker",
@@ -37,7 +43,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/the-legend-of-zelda-the-wind-waker/dragon-roost-island?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Chrono Trigger",
@@ -46,7 +51,6 @@ export default function Home() {
       videoStyle: "Contraband Cover",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/chrono-trigger/secret-of-the-forest?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "N/A",
@@ -55,7 +59,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/wii/wii-shop-channel?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Undertale",
@@ -64,7 +67,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/undertale/once-upon-a-time?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Pikmin 2",
@@ -73,7 +75,6 @@ export default function Home() {
       videoStyle: "8-bit Music Theory Cover",
       sheetMusicLink:
         "https://drive.google.com/drive/u/0/folders/1sf3Jlr16JhZb9w9tdj2N7md6LUqZcN1l",
-      sheetMusicOrigin: "Google Drive",
     },
     {
       game: "Mario Cart 64",
@@ -82,7 +83,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/mario-kart-64/rainbow-road?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Final Fantasy VII",
@@ -91,7 +91,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1grSwc9T8W-KhsQ1Ke7Qmbo1hmsxKcLbl",
-      sheetMusicOrigin: "Google Drive",
     },
     {
       game: "Donkey Kong Country 2: Diddy's Kong Quest",
@@ -100,7 +99,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/donkey-kong-country-2-diddys-kong-quest/stickerbush-symphony?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
     {
       game: "Chrono Trigger",
@@ -109,26 +107,23 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1d7xxRg-0WrN29jzTUoTZ_bGSDjjZFpSN?usp=sharing",
-      sheetMusicOrigin: "Google Drive",
     },
-    {
-      game: "Hollow Knight",
-      name: "Dirtmouth",
-      videoLink: "https://www.youtube.com/watch?v=NSlkW1fFkyo",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/hollow-knight/dirtmouth?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
-    },
-    {
-      game: "Castlevania",
-      name: "Bloody Tears",
-      videoLink: "https://www.youtube.com/watch?v=e2oZtvjg5oA",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/castlevania-ii-simons-quest/bloody-tears?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
-    },
+    // {
+    //   game: "Hollow Knight",
+    //   name: "Dirtmouth",
+    //   videoLink: "https://www.youtube.com/watch?v=NSlkW1fFkyo",
+    //   videoStyle: "Original",
+    //   sheetMusicLink:
+    //     "https://www.vgleadsheets.com/view/hollow-knight/dirtmouth?transposition=C#",
+    // },
+    // {
+    //   game: "Castlevania",
+    //   name: "Bloody Tears",
+    //   videoLink: "https://www.youtube.com/watch?v=e2oZtvjg5oA",
+    //   videoStyle: "Original",
+    //   sheetMusicLink:
+    //     "https://www.vgleadsheets.com/view/castlevania-ii-simons-quest/bloody-tears?transposition=C#",
+    // },
     {
       game: "Persona 5",
       name: "Layer Cake",
@@ -136,7 +131,6 @@ export default function Home() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
-      sheetMusicOrigin: "vgleadsheets",
     },
   ];
 
@@ -176,24 +170,22 @@ export default function Home() {
       <Table.Root>
         <Table.Header>
           <Table.Row>
-            <Table.ColumnHeaderCell>Game</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Song</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
             <Table.ColumnHeaderCell>YouTube link</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Sheet music link</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell>Game</Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
           {songs.map((song) => (
             <Table.Row>
-              <Table.RowHeaderCell>{song.game}</Table.RowHeaderCell>
-              <Table.Cell>{song.name}</Table.Cell>
+              <Table.Cell>
+                <Link href={song.sheetMusicLink}>{song.name}</Link>
+              </Table.Cell>
               <Table.Cell>
                 <Link href={song.videoLink}>{song.videoStyle}</Link>
               </Table.Cell>
-              <Table.Cell>
-                <Link href={song.sheetMusicLink}>{song.sheetMusicOrigin}</Link>
-              </Table.Cell>
+              <Table.Cell>{song.game}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>

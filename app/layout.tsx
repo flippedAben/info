@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import React from "react";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VGM jam",
-  description: "Info about a VGM jam",
+  title: "TODO",
+  description: "TODO",
 };
 
 export default function RootLayout({
@@ -19,7 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme accentColor="blue" grayColor="sand" radius="large">
+        <Theme
+          accentColor="blue"
+          grayColor="sand"
+          radius="large"
+          scaling="110%"
+          appearance="dark"
+        >
           {children}
         </Theme>
       </body>

@@ -24,7 +24,7 @@ To locally test your changes,
 npm run dev
 ```
 
-Then, go to `http://localhost:3000/info`.
+Then, go to `http://localhost:3000/vgm`.
 
 ### Deploy to GitHub Pages
 

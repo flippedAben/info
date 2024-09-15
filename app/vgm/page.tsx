@@ -59,6 +59,14 @@ export default function Vgm() {
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
     },
+    {
+      game: "Mega Man 2",
+      name: "Air Man",
+      videoLink: "https://www.youtube.com/watch?v=IWcLXF2eyD4",
+      videoStyle: "Cover",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/16TLhCsBAYKHETgNfAmns28iHjVdWJxYH",
+    },
   ].sort((songA, songB) => (songA.name < songB.name ? -1 : 1));
 
   const playedSongs: Song[] = [

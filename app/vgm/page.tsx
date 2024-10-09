@@ -10,14 +10,22 @@ type Song = {
 };
 
 export default function Vgm() {
-  const arrangedSongs: Song[] = [
+  const setlist: Song[] = [
     {
-      game: "Zelda: Breath of the Wild",
-      name: "Hateno Village Theme",
-      videoLink: "https://www.youtube.com/watch?v=Uj07-YU5cTk",
-      videoStyle: "Original",
+      game: "Mega Man 2",
+      name: "Air Man",
+      videoLink: "https://www.youtube.com/watch?v=IWcLXF2eyD4",
+      videoStyle: "Cover",
       sheetMusicLink:
-        "https://drive.google.com/drive/folders/1qmwvRJHjK6IOrFF7IiSFeXy-cCyC5KZR?usp=sharing",
+        "https://drive.google.com/drive/folders/16TLhCsBAYKHETgNfAmns28iHjVdWJxYH",
+    },
+    {
+      game: "Super Smash Bros Brawl",
+      name: "Bramble Blast",
+      videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
+      videoStyle: "insaneintherain cover",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
     },
     {
       game: "Pikmin 2",
@@ -26,6 +34,65 @@ export default function Vgm() {
       videoStyle: "8-bit Music Theory Cover",
       sheetMusicLink:
         "https://drive.google.com/drive/u/0/folders/1sf3Jlr16JhZb9w9tdj2N7md6LUqZcN1l",
+    },
+    {
+      game: "Xenoblade Chronicles",
+      name: "You Will Know Our Names",
+      videoLink: "https://www.youtube.com/watch?v=g7yNyhLOIa4",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
+    },
+    {
+      game: "Chrono Trigger",
+      name: "Secret Of The Forest",
+      videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
+      videoStyle: "Contraband Cover",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/chrono-trigger/secret-of-the-forest?transposition=C#",
+    },
+    {
+      game: "Persona 5",
+      name: "Layer Cake",
+      videoLink: "https://www.youtube.com/watch?v=C4nTv-pVk0k",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
+    },
+    {
+      game: "Pokemon",
+      name: "Rustboro City",
+      videoLink: "https://www.youtube.com/watch?v=Y3auFhxfsmI",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/pokmon-ruby-sapphire/rustboro-city?transposition=C#",
+    },
+    {
+      game: "Wii Sports Resort",
+      name: "Title Theme",
+      videoLink: "https://www.youtube.com/watch?v=0eEWxzW2wJU",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/wii-sports-resort/title-theme?transposition=C#",
+    },
+    {
+      game: "Fez",
+      name: "Flow",
+      videoLink: "https://www.youtube.com/watch?v=IlBQh6N7RDw",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1xNEXOTVOHh3sOR9u0YitH4FD8HTNKw6g",
+    },
+  ];
+
+  const playedSongs: Song[] = [
+    {
+      game: "Zelda: Breath of the Wild",
+      name: "Hateno Village Theme",
+      videoLink: "https://www.youtube.com/watch?v=Uj07-YU5cTk",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1qmwvRJHjK6IOrFF7IiSFeXy-cCyC5KZR?usp=sharing",
     },
     {
       game: "Final Fantasy VII",
@@ -43,33 +110,6 @@ export default function Vgm() {
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1d7xxRg-0WrN29jzTUoTZ_bGSDjjZFpSN?usp=sharing",
     },
-    {
-      game: "Super Smash Bros Brawl",
-      name: "Bramble Blast",
-      videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
-      videoStyle: "insaneintherain cover",
-      sheetMusicLink:
-        "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
-    },
-    {
-      game: "Xenoblade Chronicles",
-      name: "You Will Know Our Names",
-      videoLink: "https://www.youtube.com/watch?v=g7yNyhLOIa4",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
-    },
-    {
-      game: "Mega Man 2",
-      name: "Air Man",
-      videoLink: "https://www.youtube.com/watch?v=IWcLXF2eyD4",
-      videoStyle: "Cover",
-      sheetMusicLink:
-        "https://drive.google.com/drive/folders/16TLhCsBAYKHETgNfAmns28iHjVdWJxYH",
-    },
-  ].sort((songA, songB) => (songA.name < songB.name ? -1 : 1));
-
-  const playedSongs: Song[] = [
     {
       game: "Pokemon Gold & Silver",
       name: "Azalea Town",
@@ -94,14 +134,6 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/the-legend-of-zelda-the-wind-waker/dragon-roost-island?transposition=C#",
-    },
-    {
-      game: "Chrono Trigger",
-      name: "Secret Of The Forest",
-      videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
-      videoStyle: "Contraband Cover",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/chrono-trigger/secret-of-the-forest?transposition=C#",
     },
     {
       game: "N/A",
@@ -151,14 +183,6 @@ export default function Vgm() {
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/castlevania-ii-simons-quest/bloody-tears?transposition=C#",
     },
-    {
-      game: "Persona 5",
-      name: "Layer Cake",
-      videoLink: "https://www.youtube.com/watch?v=C4nTv-pVk0k",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
-    },
   ];
 
   return (
@@ -205,9 +229,10 @@ export default function Vgm() {
         </li>
       </Text>
       <Heading size="6" weight="regular">
-        Arranged songs
+        Set list
       </Heading>
-      We have custom arrangements for these songs:
+      We will play through as many of the {setlist.length} songs as time allows
+      for.
       <Table.Root>
         <Table.Header>
           <Table.Row>
@@ -218,7 +243,7 @@ export default function Vgm() {
         </Table.Header>
 
         <Table.Body>
-          {arrangedSongs.map((song) => (
+          {setlist.map((song) => (
             <Table.Row>
               <Table.Cell>
                 <Link href={song.sheetMusicLink}>{song.name}</Link>

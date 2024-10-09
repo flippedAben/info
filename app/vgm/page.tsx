@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text, Heading, Link, Table } from "@radix-ui/themes";
+import { VideoIcon, LaptopIcon, Pencil2Icon } from "@radix-ui/react-icons";
 
 type Song = {
   game: string;
@@ -7,6 +8,7 @@ type Song = {
   videoLink: string;
   videoStyle: string;
   sheetMusicLink: string;
+  arranged?: boolean;
 };
 
 export default function Vgm() {
@@ -18,6 +20,7 @@ export default function Vgm() {
       videoStyle: "Cover",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/16TLhCsBAYKHETgNfAmns28iHjVdWJxYH",
+      arranged: true,
     },
     {
       game: "Super Smash Bros Brawl",
@@ -26,6 +29,7 @@ export default function Vgm() {
       videoStyle: "insaneintherain cover",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
+      arranged: true,
     },
     {
       game: "Pikmin 2",
@@ -34,6 +38,7 @@ export default function Vgm() {
       videoStyle: "8-bit Music Theory Cover",
       sheetMusicLink:
         "https://drive.google.com/drive/u/0/folders/1sf3Jlr16JhZb9w9tdj2N7md6LUqZcN1l",
+      arranged: true,
     },
     {
       game: "Xenoblade Chronicles",
@@ -42,6 +47,7 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
+      arranged: true,
     },
     {
       game: "Chrono Trigger",
@@ -82,6 +88,7 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1xNEXOTVOHh3sOR9u0YitH4FD8HTNKw6g",
+      arranged: true,
     },
   ];
 
@@ -93,6 +100,7 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1qmwvRJHjK6IOrFF7IiSFeXy-cCyC5KZR?usp=sharing",
+      arranged: true,
     },
     {
       game: "Final Fantasy VII",
@@ -101,6 +109,7 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1grSwc9T8W-KhsQ1Ke7Qmbo1hmsxKcLbl",
+      arranged: true,
     },
     {
       game: "Chrono Trigger",
@@ -109,6 +118,7 @@ export default function Vgm() {
       videoStyle: "Original",
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1d7xxRg-0WrN29jzTUoTZ_bGSDjjZFpSN?usp=sharing",
+      arranged: true,
     },
     {
       game: "Pokemon Gold & Silver",
@@ -231,14 +241,20 @@ export default function Vgm() {
       <Heading size="6" weight="regular">
         Set list
       </Heading>
-      We will play through as many of the {setlist.length} songs as time allows
-      for.
+      <Text>
+        We will play through these. <Pencil2Icon color="gold" /> indicates we
+        have a custom arrangement for the song.
+      </Text>
       <Table.Root>
         <Table.Header>
           <Table.Row>
             <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>YouTube link</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Game</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell>
+              <VideoIcon color="#E5484D" />
+            </Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell>
+              <LaptopIcon />
+            </Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
 
@@ -246,7 +262,9 @@ export default function Vgm() {
           {setlist.map((song) => (
             <Table.Row>
               <Table.Cell>
-                <Link href={song.sheetMusicLink}>{song.name}</Link>
+                <Link href={song.sheetMusicLink}>
+                  {song.name} {song.arranged && <Pencil2Icon color="gold" />}
+                </Link>
               </Table.Cell>
               <Table.Cell>
                 <Link href={song.videoLink}>{song.videoStyle}</Link>

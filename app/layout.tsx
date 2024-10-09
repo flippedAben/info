@@ -23,7 +23,7 @@ export default function RootLayout({
           accentColor="blue"
           grayColor="sand"
           radius="large"
-          scaling="110%"
+          scaling="100%"
           appearance="dark"
         >
           {children}

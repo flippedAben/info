@@ -207,7 +207,7 @@ export default function Vgm() {
       <Heading size="6" weight="regular">
         Arranged songs
       </Heading>
-      We have arranged these {arrangedSongs.length} songs:
+      We have custom arrangements for these songs:
       <Table.Root>
         <Table.Header>
           <Table.Row>

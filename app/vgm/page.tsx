@@ -74,14 +74,6 @@ export default function Vgm() {
         "https://www.vgleadsheets.com/view/pokmon-ruby-sapphire/rustboro-city?transposition=C#",
     },
     {
-      game: "Wii Sports Resort",
-      name: "Title Theme",
-      videoLink: "https://www.youtube.com/watch?v=0eEWxzW2wJU",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/wii-sports-resort/title-theme?transposition=C#",
-    },
-    {
       game: "Fez",
       name: "Flow",
       videoLink: "https://www.youtube.com/watch?v=IlBQh6N7RDw",
@@ -89,6 +81,23 @@ export default function Vgm() {
       sheetMusicLink:
         "https://drive.google.com/drive/folders/1xNEXOTVOHh3sOR9u0YitH4FD8HTNKw6g",
       arranged: true,
+    },
+    {
+      game: "Balatro",
+      name: "Main Theme",
+      videoLink: "https://www.youtube.com/watch?v=tURydXfCVlQ",
+      videoStyle: "Cover",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/balatro/main-theme?transposition=C#",
+      arranged: false,
+    },
+    {
+      game: "Wii Sports Resort",
+      name: "Title Theme",
+      videoLink: "https://www.youtube.com/watch?v=0eEWxzW2wJU",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/wii-sports-resort/title-theme?transposition=C#",
     },
   ];
 
@@ -207,11 +216,13 @@ export default function Vgm() {
       <Heading size="6" weight="regular">
         Who
       </Heading>
-      <Text>All experience levels welcome. Recommended skills:</Text>
       <Text ml="2">
+        <li>Can play an instrument.</li>
         <li>Can read sheet music or learn by ear.</li>
         <li>Know basic chords.</li>
       </Text>
+      Current group is 5 - 8 people, consisting of 2-4 sax/trumpet players, 1-2
+      pianists, 1 bassist, 1-2 drummers.
       <Heading size="6" weight="regular">
         When
       </Heading>

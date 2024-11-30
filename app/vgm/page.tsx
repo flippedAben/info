@@ -91,6 +91,9 @@ export default function Vgm() {
         "https://www.vgleadsheets.com/view/balatro/main-theme?transposition=C#",
       arranged: false,
     },
+  ];
+
+  const playedSongs: Song[] = [
     {
       game: "Wii Sports Resort",
       name: "Title Theme",
@@ -99,9 +102,6 @@ export default function Vgm() {
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/wii-sports-resort/title-theme?transposition=C#",
     },
-  ];
-
-  const playedSongs: Song[] = [
     {
       game: "Zelda: Breath of the Wild",
       name: "Hateno Village Theme",

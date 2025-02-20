@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Theme
-          accentColor="blue"
+          accentColor="indigo"
           grayColor="sand"
           radius="large"
           scaling="100%"

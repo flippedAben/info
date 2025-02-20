@@ -1,6 +1,17 @@
 import React from "react";
-import { Flex, Text, Heading, Link, Table } from "@radix-ui/themes";
-import { VideoIcon, LaptopIcon, Pencil2Icon } from "@radix-ui/react-icons";
+import {
+  Flex,
+  Text,
+  Heading,
+  Link,
+  Table,
+  TabsRoot,
+  TabsTrigger,
+  TabsContent,
+  TabsList,
+  Box,
+} from "@radix-ui/themes";
+import { VideoIcon, KeyboardIcon, Pencil2Icon } from "@radix-ui/react-icons";
 
 type Song = {
   game: string;
@@ -23,15 +34,6 @@ export default function Vgm() {
       arranged: true,
     },
     {
-      game: "Super Smash Bros Brawl",
-      name: "Bramble Blast",
-      videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
-      videoStyle: "insaneintherain cover",
-      sheetMusicLink:
-        "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
-      arranged: true,
-    },
-    {
       game: "Pikmin 2",
       name: "Perplexing Pool",
       videoLink: "https://www.youtube.com/watch?v=gw5QPreqViE",
@@ -41,29 +43,12 @@ export default function Vgm() {
       arranged: true,
     },
     {
-      game: "Xenoblade Chronicles",
-      name: "You Will Know Our Names",
-      videoLink: "https://www.youtube.com/watch?v=g7yNyhLOIa4",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
-      arranged: true,
-    },
-    {
       game: "Chrono Trigger",
       name: "Secret Of The Forest",
       videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
       videoStyle: "Contraband Cover",
       sheetMusicLink:
         "https://www.vgleadsheets.com/view/chrono-trigger/secret-of-the-forest?transposition=C#",
-    },
-    {
-      game: "Persona 5",
-      name: "Layer Cake",
-      videoLink: "https://www.youtube.com/watch?v=C4nTv-pVk0k",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
     },
     {
       game: "Pokemon",
@@ -91,16 +76,42 @@ export default function Vgm() {
         "https://www.vgleadsheets.com/view/balatro/main-theme?transposition=C#",
       arranged: false,
     },
-  ];
-
-  const playedSongs: Song[] = [
     {
-      game: "Wii Sports Resort",
-      name: "Title Theme",
-      videoLink: "https://www.youtube.com/watch?v=0eEWxzW2wJU",
+      game: "Super Smash Bros Brawl",
+      name: "Bramble Blast",
+      videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
+      videoStyle: "insaneintherain cover",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
+      arranged: true,
+    },
+    {
+      game: "Persona 5",
+      name: "Layer Cake",
+      videoLink: "https://www.youtube.com/watch?v=C4nTv-pVk0k",
       videoStyle: "Original",
       sheetMusicLink:
-        "https://www.vgleadsheets.com/view/wii-sports-resort/title-theme?transposition=C#",
+        "https://www.vgleadsheets.com/view/persona-5/layer-cake?transposition=C#",
+    },
+    {
+      game: "Xenoblade Chronicles",
+      name: "You Will Know Our Names",
+      videoLink: "https://www.youtube.com/watch?v=g7yNyhLOIa4",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1jo7lMU6LZKrD0Ubbiw5773mub-PyJ9s_",
+      arranged: true,
+    },
+  ];
+
+  const jamSongs: Song[] = [
+    {
+      game: "Kirby",
+      name: "Great Cave Escape",
+      videoLink: "https://www.youtube.com/watch?v=tkmipdkxcxg",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://www.vgleadsheets.com/view/kirby-and-the-rainbow-curse/great-cave-escape?transposition=C",
     },
     {
       game: "Zelda: Breath of the Wild",
@@ -179,14 +190,6 @@ export default function Vgm() {
         "https://www.vgleadsheets.com/view/mario-kart-64/rainbow-road?transposition=C#",
     },
     {
-      game: "Donkey Kong Country 2: Diddy's Kong Quest",
-      name: "Stickerbush Symphony",
-      videoLink: "https://www.youtube.com/watch?v=mdPlcKg-qFs",
-      videoStyle: "Original",
-      sheetMusicLink:
-        "https://www.vgleadsheets.com/view/donkey-kong-country-2-diddys-kong-quest/stickerbush-symphony?transposition=C#",
-    },
-    {
       game: "Hollow Knight",
       name: "Dirtmouth",
       videoLink: "https://www.youtube.com/watch?v=NSlkW1fFkyo",
@@ -250,41 +253,93 @@ export default function Vgm() {
         </li>
       </Text>
       <Heading size="6" weight="regular">
-        Set list
+        Music
       </Heading>
       <Text>
-        We will play through these. <Pencil2Icon color="gold" /> indicates we
-        have a custom arrangement for the song.
+        <Pencil2Icon color="gold" /> indicates we have a custom arrangement for
+        the song.
       </Text>
-      <Table.Root>
-        <Table.Header>
-          <Table.Row>
-            <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>
-              <VideoIcon color="#E5484D" />
-            </Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>
-              <LaptopIcon />
-            </Table.ColumnHeaderCell>
-          </Table.Row>
-        </Table.Header>
+      <TabsRoot defaultValue="1">
+        <TabsList>
+          <TabsTrigger value="1">Setlist</TabsTrigger>
+          <TabsTrigger value="2">Past songs</TabsTrigger>
+        </TabsList>
+        <TabsContent value="1">
+          <Box p="3">
+            <Text>
+              We'll play through most of these, and work on recordings.
+            </Text>
+            <Table.Root>
+              <Table.Header>
+                <Table.Row>
+                  <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell>
+                    <VideoIcon color="#E5484D" />
+                  </Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell>
+                    <KeyboardIcon />
+                  </Table.ColumnHeaderCell>
+                </Table.Row>
+              </Table.Header>
 
-        <Table.Body>
-          {setlist.map((song) => (
-            <Table.Row>
-              <Table.Cell>
-                <Link href={song.sheetMusicLink}>
-                  {song.name} {song.arranged && <Pencil2Icon color="gold" />}
-                </Link>
-              </Table.Cell>
-              <Table.Cell>
-                <Link href={song.videoLink}>{song.videoStyle}</Link>
-              </Table.Cell>
-              <Table.Cell>{song.game}</Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table.Root>
+              <Table.Body>
+                {setlist.map((song) => (
+                  <Table.Row>
+                    <Table.Cell>
+                      <Link href={song.sheetMusicLink}>
+                        {song.name}{" "}
+                        {song.arranged && <Pencil2Icon color="gold" />}
+                      </Link>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <Link href={song.videoLink}>{song.videoStyle}</Link>
+                    </Table.Cell>
+                    <Table.Cell>{song.game}</Table.Cell>
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table.Root>
+          </Box>
+        </TabsContent>
+        <TabsContent value="2">
+          <Box p="3">
+            <Text>
+              Songs we've played before. We'll play these for fun in the latter
+              half of the session.
+            </Text>
+            <Table.Root>
+              <Table.Header>
+                <Table.Row>
+                  <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell>
+                    <VideoIcon color="#E5484D" />
+                  </Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell>
+                    <KeyboardIcon />
+                  </Table.ColumnHeaderCell>
+                </Table.Row>
+              </Table.Header>
+
+              <Table.Body>
+                {jamSongs.map((song) => (
+                  <Table.Row>
+                    <Table.Cell>
+                      <Link href={song.sheetMusicLink}>
+                        {song.name}{" "}
+                        {song.arranged && <Pencil2Icon color="gold" />}
+                      </Link>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <Link href={song.videoLink}>{song.videoStyle}</Link>
+                    </Table.Cell>
+                    <Table.Cell>{song.game}</Table.Cell>
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table.Root>
+          </Box>
+        </TabsContent>
+      </TabsRoot>
     </Flex>
   );
 }

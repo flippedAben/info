@@ -106,6 +106,15 @@ export default function Vgm() {
 
   const jamSongs: Song[] = [
     {
+      game: "Xenoblade Chronicles",
+      name: "Battle! Torna",
+      videoLink: "https://www.youtube.com/watch?v=1weNnjzaXbY",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/1Unk20XGDM21RTXT_cR9Gii6ySFKB_ECA?usp=sharing",
+      arranged: true,
+    },
+    {
       game: "Kirby",
       name: "Great Cave Escape",
       videoLink: "https://www.youtube.com/watch?v=tkmipdkxcxg",
@@ -255,7 +264,7 @@ export default function Vgm() {
       <Heading size="6" weight="regular">
         Music
       </Heading>
-      <Text>
+      <Text size="1">
         <Pencil2Icon color="gold" /> indicates we have a custom arrangement for
         the song.
       </Text>

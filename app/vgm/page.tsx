@@ -77,6 +77,15 @@ export default function Vgm() {
       arranged: false,
     },
     {
+      game: "Zelda: Link's Awakening",
+      name: "Bossa (ballad) of the Windfish",
+      videoLink: "https://www.youtube.com/watch?v=I8VI0dFNKbM",
+      videoStyle: "Original",
+      sheetMusicLink:
+        "https://drive.google.com/drive/folders/15Ov-GK8REgMOeQY3hCbuNE0GlM-CYPS3",
+      arranged: true,
+    },
+    {
       game: "Super Smash Bros Brawl",
       name: "Bramble Blast",
       videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
@@ -105,6 +114,14 @@ export default function Vgm() {
   ];
 
   const jamSongs: Song[] = [
+    // {
+    //   game: "Pokemon HeartGold/SoulSilver",
+    //   name: "National Park",
+    //   videoLink: "https://www.youtube.com/watch?v=4ujh7lvcsRs",
+    //   videoStyle: "Original",
+    //   sheetMusicLink:
+    //     "",
+    // },
     {
       game: "Xenoblade Chronicles",
       name: "Battle! Torna",
@@ -264,6 +281,14 @@ export default function Vgm() {
       <Heading size="6" weight="regular">
         Music
       </Heading>
+      <Text>
+        The format of the jam:
+        <li>
+          Play some songs from "setlist" tab (record some if we feel good).
+        </li>
+        <li>Play some songs from the "jam" tab.</li>
+        <li>Discovery time. People suggest songs we can sight read.</li>
+      </Text>
       <Text size="1">
         <Pencil2Icon color="gold" /> indicates we have a custom arrangement for
         the song.
@@ -271,13 +296,10 @@ export default function Vgm() {
       <TabsRoot defaultValue="1">
         <TabsList>
           <TabsTrigger value="1">Setlist</TabsTrigger>
-          <TabsTrigger value="2">Past songs</TabsTrigger>
+          <TabsTrigger value="2">Jam</TabsTrigger>
         </TabsList>
         <TabsContent value="1">
           <Box p="3">
-            <Text>
-              We'll play through most of these, and work on recordings.
-            </Text>
             <Table.Root>
               <Table.Header>
                 <Table.Row>
@@ -312,10 +334,6 @@ export default function Vgm() {
         </TabsContent>
         <TabsContent value="2">
           <Box p="3">
-            <Text>
-              Songs we've played before. We'll play these for fun in the latter
-              half of the session.
-            </Text>
             <Table.Root>
               <Table.Header>
                 <Table.Row>

@@ -24,7 +24,7 @@ To locally test your changes,
 npm run dev
 ```
 
-Then, go to `http://localhost:3000/vgm`.
+Then, go to `http://localhost:3000/info/vgm` or `http://localhost:3000/info/finalbossa`.
 
 ### Deploy to GitHub Pages
 

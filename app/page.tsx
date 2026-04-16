@@ -1,18 +1,11 @@
 import React from "react";
-import { Flex } from "@radix-ui/themes";
-
-type Song = {
-  game: string;
-  name: string;
-  videoLink: string;
-  videoStyle: string;
-  sheetMusicLink: string;
-};
+import { Flex, Link } from "@radix-ui/themes";
 
 export default function Home() {
   return (
     <Flex direction="column" gap="2" p="5">
-      TODO
+      <Link href="./info/vgm">VGM jam</Link>
+      <Link href="./info/finalbossa">Final Bossa setlist</Link>
     </Flex>
   );
 }

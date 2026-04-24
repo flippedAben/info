@@ -5,6 +5,7 @@ export type Song = {
   videoStyle: string;
   sheetMusicLink: string;
   arranged?: boolean;
+  soloists?: string[];
 };
 
 export const Setlist: Song[] = [
@@ -16,32 +17,7 @@ export const Setlist: Song[] = [
     sheetMusicLink:
       "https://drive.google.com/drive/folders/17CGOKSG_mwKK7DOBDGIQTa97qsq4Yn1h?usp=drive_link",
     arranged: true,
-  },
-  {
-    game: "Pokemon",
-    name: "Rustboro City",
-    videoLink: "https://www.youtube.com/watch?v=Y3auFhxfsmI",
-    videoStyle: "Original",
-    sheetMusicLink:
-      "https://www.vgleadsheets.com/view/pokmon-ruby-sapphire/rustboro-city?transposition=C#",
-  },
-  {
-    game: "Zelda: The Wind Waker",
-    name: "Dragon Roost Island",
-    videoLink: "https://www.youtube.com/watch?v=QtcgZGp3FGs",
-    videoStyle: "Original",
-    sheetMusicLink:
-      "https://drive.google.com/drive/folders/1XUaRRCUAoFAdl8Kl_Xb_mHgGYlvzMB4d?usp=drive_link",
-    arranged: true,
-  },
-  {
-    game: "Super Mario Galaxy",
-    name: "Rosalina in the Observatory",
-    videoLink: "https://www.youtube.com/watch?v=8PQ5uXXGQTs",
-    videoStyle: "Cover",
-    sheetMusicLink:
-      "https://drive.google.com/drive/folders/1d45YpSiw05XPzYK9VGTVTBDkyCxUZZpA?usp=drive_link",
-    arranged: true,
+    soloists: ["Shahrez", "All trade 4s"],
   },
   {
     game: "Mega Man 2",
@@ -51,33 +27,27 @@ export const Setlist: Song[] = [
     sheetMusicLink:
       "https://drive.google.com/drive/folders/16TLhCsBAYKHETgNfAmns28iHjVdWJxYH",
     arranged: true,
+    soloists: ["Thomas"],
   },
   {
-    game: "Persona 5",
-    name: "Beneath the Mask",
-    videoLink: "https://www.youtube.com/watch?v=gFFOXwniVKw",
+    game: "Super Mario Galaxy",
+    name: "Rosalina in the Observatory",
+    videoLink: "https://www.youtube.com/watch?v=8PQ5uXXGQTs",
+    videoStyle: "Cover",
+    sheetMusicLink:
+      "https://drive.google.com/drive/folders/1d45YpSiw05XPzYK9VGTVTBDkyCxUZZpA?usp=drive_link",
+    arranged: true,
+    soloists: ["Brian", "Hyrum", "Thomas"],
+  },
+  {
+    game: "Zelda: The Wind Waker",
+    name: "Dragon Roost Island",
+    videoLink: "https://www.youtube.com/watch?v=QtcgZGp3FGs",
     videoStyle: "Original",
     sheetMusicLink:
-      "https://drive.google.com/drive/folders/1lpv7UsWshacCHSHqLfttP5VgmQVhp9E3?usp=drive_link",
+      "https://drive.google.com/drive/folders/1XUaRRCUAoFAdl8Kl_Xb_mHgGYlvzMB4d?usp=drive_link",
     arranged: true,
-  },
-  {
-    game: "Super Smash Bros Brawl",
-    name: "Bramble Blast",
-    videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
-    videoStyle: "insaneintherain cover",
-    sheetMusicLink:
-      "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
-    arranged: true,
-  },
-  {
-    game: "Chrono Trigger",
-    name: "Secret of the Forest",
-    videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
-    videoStyle: "Contraband Cover",
-    sheetMusicLink:
-      "https://drive.google.com/drive/folders/10rzE5Mm4gq_i3asSzAbN2o-8IcOBDYMF?usp=drive_link",
-    arranged: true,
+    soloists: ["Hyrum", "Thomas", "Maria", "Shahrez"],
   },
   {
     game: "Undertale",
@@ -87,6 +57,46 @@ export const Setlist: Song[] = [
     sheetMusicLink:
       "https://drive.google.com/drive/folders/1DxYrLqXiCE9e5ycFzTjxdwNsswM6ySIp?usp=drive_link",
     arranged: true,
+    soloists: ["Thomas and Hyrum trade", "All"],
+  },
+  {
+    game: "Persona 5",
+    name: "Beneath the Mask",
+    videoLink: "https://www.youtube.com/watch?v=gFFOXwniVKw",
+    videoStyle: "Original",
+    sheetMusicLink:
+      "https://drive.google.com/drive/folders/1lpv7UsWshacCHSHqLfttP5VgmQVhp9E3?usp=drive_link",
+    arranged: true,
+    soloists: ["Feat: Lynn", "Maria", "Ben"],
+  },
+  {
+    game: "Super Smash Bros Brawl",
+    name: "Bramble Blast",
+    videoLink: "https://www.youtube.com/watch?v=qco0o3MDCL4",
+    videoStyle: "insaneintherain cover",
+    sheetMusicLink:
+      "https://drive.google.com/drive/folders/1sl_0eWCK177_dvdY47VrmQ1w0QHbpvhu",
+    arranged: true,
+    soloists: ["Shahrez and Hyrum trading"],
+  },
+  {
+    game: "Pokemon",
+    name: "Rustboro City",
+    videoLink: "https://www.youtube.com/watch?v=Y3auFhxfsmI",
+    videoStyle: "Original",
+    sheetMusicLink:
+      "https://www.vgleadsheets.com/view/pokmon-ruby-sapphire/rustboro-city?transposition=C#",
+    soloists: ["Hyrum", "Shahrez"],
+  },
+  {
+    game: "Chrono Trigger",
+    name: "Secret of the Forest",
+    videoLink: "https://www.youtube.com/watch?v=pYgQEjcosP0",
+    videoStyle: "Contraband Cover",
+    sheetMusicLink:
+      "https://drive.google.com/drive/folders/10rzE5Mm4gq_i3asSzAbN2o-8IcOBDYMF?usp=drive_link",
+    arranged: true,
+    soloists: ["Ben", "Brian", "Thomas"],
   },
   {
     game: "Sonic",
@@ -96,6 +106,7 @@ export const Setlist: Song[] = [
     sheetMusicLink:
       "https://drive.google.com/drive/folders/1KdM40dL5bZhDhRWVvTfERMWjcWxu-xzB?usp=drive_link",
     arranged: true,
+    soloists: ["Thomas", "Brian", "All trade 4s"],
   },
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Heading, Link, Table, Box } from "@radix-ui/themes";
 import { VideoIcon, KeyboardIcon, Pencil2Icon } from "@radix-ui/react-icons";
-import { Setlist } from "../data";
+import { Setlist, Song } from "../data";
 
 export default function Vgm() {
   return (
@@ -16,6 +16,7 @@ export default function Vgm() {
             <Table.Row>
               <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell>Sheet music</Table.ColumnHeaderCell>
+              <Table.ColumnHeaderCell>Soloists</Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell>
                 <VideoIcon color="#E5484D" />
               </Table.ColumnHeaderCell>
@@ -34,6 +35,7 @@ export default function Vgm() {
                     {song.name} {song.arranged && <Pencil2Icon color="gold" />}
                   </Link>
                 </Table.Cell>
+                <Table.Cell>{song.soloists?.join(", ") ?? null}</Table.Cell>
                 <Table.Cell>
                   <Link href={song.videoLink}>{song.videoStyle}</Link>
                 </Table.Cell>

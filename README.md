@@ -16,9 +16,3 @@ npm run dev
 
 1. Make changes. Commit and push to `main`.
 1. `npm run deploy`
-
-Go the the URL, and you should see your changes appear shortly.
-
-```bash
-https://<github-user-name>.github.io/<github-project-name>/
-```

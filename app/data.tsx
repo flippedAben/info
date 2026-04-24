@@ -37,7 +37,7 @@ export const Setlist: Song[] = [
     sheetMusicLink:
       "https://drive.google.com/drive/folders/1d45YpSiw05XPzYK9VGTVTBDkyCxUZZpA?usp=drive_link",
     arranged: true,
-    soloists: ["Brian", "Hyrum", "Thomas"],
+    soloists: ["Brian", "Hyrum", "Shahrez"],
   },
   {
     game: "Zelda: The Wind Waker",
